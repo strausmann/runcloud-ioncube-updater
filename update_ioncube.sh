@@ -17,11 +17,14 @@ then
     sudo systemctl restart php55rc-fpm
 fi
 
-
-
-
-
-
+### PHP 5.6
+if [ -d "/RunCloud/Packages/php56rc/" ] 
+then
+    echo "Install ioncube Loader for PHP 5.6"
+    sudo cp ioncube/ioncube_loader_lin_5.6.so /RunCloud/Packages/php56rc/lib/php/extensions/no-debug-non-zts-20131226/
+    sudo bash -c 'echo "zend_extension=ioncube_loader_lin_5.6.so" > /etc/php56rc/conf.d/20ioncube.ini'
+    sudo systemctl restart php56rc-fpm
+fi
 
 echo "Remove TEMP Files"
 sudo rm -rf ioncube_loaders_lin_x86-64.tar.gz
