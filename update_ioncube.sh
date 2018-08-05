@@ -44,7 +44,7 @@ then
     sudo systemctl restart php71rc-fpm
 fi
 
-### PHP 7.1
+### PHP 7.2
 if [ -d "/RunCloud/Packages/php72rc/" ] 
 then
     echo "Install ioncube Loader for PHP 7.2"
