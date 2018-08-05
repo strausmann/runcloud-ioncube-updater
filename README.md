@@ -18,5 +18,5 @@ git pull
 ## Execute
 ```console
 cd runcloud-ioncube-updater
-.\update_ioncube.sh
+./update_ioncube.sh
 ```
