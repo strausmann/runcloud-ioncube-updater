@@ -62,7 +62,6 @@ then
     sudo systemctl restart php73rc-fpm
 fi
 
-
 echo "Remove TEMP Files"
 sudo rm -rf ioncube_loaders_lin_x86-64.tar.gz
 sudo rm -rf /usr/local/ioncube
