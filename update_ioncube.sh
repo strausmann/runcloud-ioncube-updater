@@ -62,6 +62,15 @@ then
     sudo systemctl restart php73rc-fpm
 fi
 
+### PHP 7.4
+if [ -d "/RunCloud/Packages/php74rc/" ]
+then
+    echo "Install ioncube Loader for PHP 7.4"
+    sudo cp ioncube/ioncube_loader_lin_7.4.so /RunCloud/Packages/php74rc/lib/php/extensions/no-debug-non-zts-20190902/
+    sudo bash -c 'echo "zend_extension=ioncube_loader_lin_7.4.so" > /etc/php74rc/conf.d/20ioncube.ini'
+    sudo systemctl restart php74rc-fpm
+fi
+
 echo "Remove TEMP Files"
 sudo rm -rf ioncube_loaders_lin_x86-64.tar.gz
 sudo rm -rf /usr/local/ioncube
